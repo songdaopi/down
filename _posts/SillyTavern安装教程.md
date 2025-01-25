@@ -1,6 +1,6 @@
 ---
 title: SillyTavern安装教程
-cover: https://pic.imgdb.cn/item/675827bed0e0a243d4e1780a.jpg
+cover: https://files.catbox.moe/eur3ik.png
 swiper_index: 10
 top_group_index: 10
 background: '#fff'
@@ -29,3 +29,7 @@ highlight_shrink:
 aside:
 ai:
 ---
+# 酒馆安装教程
+## 准备工作
+1. 已安装nodejs的设备
+>施工中
