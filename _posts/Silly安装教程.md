@@ -29,6 +29,7 @@ highlight_shrink:
 aside:
 ai:
 ---
-# 施工中
-- 稍等
-  - 等待
+# 酒馆安装教程
+## 准备工作
+1. 已安装nodejs的设备
+>施工中
