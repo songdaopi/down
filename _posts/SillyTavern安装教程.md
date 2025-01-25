@@ -6,8 +6,8 @@ top_group_index: 10
 background: '#fff'
 date: 2025-01-25 15:14:18
 updated:
-tags:
-categories:
+tags: SillyTavern
+categories: 教程
 password:
 top:
 keywords:
