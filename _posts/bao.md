@@ -1,6 +1,6 @@
 ---
 title: bao
-cover: https://pic.imgdb.cn/item/675827bed0e0a243d4e1780a.jpg
+cover: https://files.catbox.moe/8ug8ta.png
 swiper_index: 10
 top_group_index: 10
 background: '#fff'
