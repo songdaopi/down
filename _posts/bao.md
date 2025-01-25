@@ -1,5 +1,5 @@
 ---
-title: bao
+title: 哈基米
 cover: https://files.catbox.moe/8ug8ta.png
 swiper_index: 10
 top_group_index: 10
@@ -32,4 +32,4 @@ ai:
 # 施工中
 - 稍等
  - 等待
-吖吖呀哟
+># 很快就会…
