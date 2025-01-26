@@ -6,7 +6,7 @@ top_group_index: 10
 background: '#fff'
 date: 2025-01-26 03:26:22
 updated:
-tags: "claude","渠道"
+tags: claude 渠道
 categories: 教程
 password:
 top:
