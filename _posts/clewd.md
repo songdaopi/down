@@ -1,6 +1,6 @@
 ---
 title: clewd
-cover: https://pic.imgdb.cn/item/675827bed0e0a243d4e1780a.jpg
+cover: 
 swiper_index: 10
 top_group_index: 10
 background: '#fff'
@@ -30,3 +30,4 @@ aside:
 ai:
 ---
 # 别急
+喵喵
