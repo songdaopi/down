@@ -1,13 +1,13 @@
 ---
-title: Gemini
-cover: https://pic.imgdb.cn/item/675827bed0e0a243d4e1780a.jpg
+title: Gemini使用教程
+cover:
 swiper_index: 10
 top_group_index: 10
 background: '#fff'
 date: 2025-01-26 12:39:17
 updated:
-tags:
-categories:
+tags: [渠道,gemini]
+categories: 教程
 password:
 top:
 keywords:
@@ -29,3 +29,6 @@ highlight_shrink:
 aside:
 ai:
 ---
+# 施工中
+- 啊爸爸
+1. 哈基米
