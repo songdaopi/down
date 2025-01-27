@@ -33,3 +33,4 @@ ai:
 - 啊爸爸
  1. 哈基米注册
    - api获取
+    - [haji](https://aistudio.google.com/)
