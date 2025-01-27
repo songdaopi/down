@@ -1,6 +1,6 @@
 ---
 title: clewd安装
-cover: 
+cover: https://files.catbox.moe/c4l61t.jpeg
 swiper_index: 10
 top_group_index: 10
 background: '#fff'
