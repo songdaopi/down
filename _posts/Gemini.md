@@ -1,5 +1,5 @@
 ---
-title: Gemini使用教程
+title: Gemini免费使用教程
 cover:
 swiper_index: 10
 top_group_index: 10
