@@ -1,5 +1,5 @@
 ---
-title: Gemini免费使用教程
+title: Gemini使用教程
 cover: https://files.catbox.moe/gron4t.jpeg
 swiper_index: 10
 top_group_index: 10
@@ -31,6 +31,6 @@ ai:
 ---
 # 施工中
 - 啊爸爸
- 1. 哈基米注册
+ 1. gemini注册
    - api获取
-    - [haji](https://aistudio.google.com/)
+    - [aistudio](https://aistudio.google.com/)
