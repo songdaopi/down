@@ -1,0 +1,1949 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://down-3ud.pages.dev/get_ai/Gemini/">
+      
+      
+        <link rel="prev" href="../pro_refund/">
+      
+      
+        <link rel="next" href="../../leinao_about/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
+    
+    
+      
+        <title>Gemini（哈基米）模型介绍、获取和使用教程 - 类脑宝宝教程</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gemini" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="类脑宝宝教程" class="md-header__button md-logo" aria-label="类脑宝宝教程" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            类脑宝宝教程
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Gemini（哈基米）模型介绍、获取和使用教程
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preferenceocs/"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preferenceocs/" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/songdaopi/down" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    songdaopi/down
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+    
+  
+  首页
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../build/" class="md-tabs__link">
+          
+  
+    
+  
+  搭建部署
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../silly/" class="md-tabs__link">
+          
+  
+    
+  
+  酒馆使用
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+    
+  
+  获取ai渠道
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../leinao_about/" class="md-tabs__link">
+          
+  
+    
+  
+  类脑和dc相关
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="类脑宝宝教程" class="md-nav__button md-logo" aria-label="类脑宝宝教程" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    类脑宝宝教程
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/songdaopi/down" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    songdaopi/down
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    首页
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            首页
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../build/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    搭建部署
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            搭建部署
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/silly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Windows本地部署酒馆与clewd教程
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/gitdesk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    通过 Github Desktop 在PC本地安装酒馆/Clewd/YouChat_Proxy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/vps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VPS 云端部署酒馆与Clewd
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../build/dock/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    傻瓜式图文教程:SillyTavern Docker 一键部署教程,开箱即用的容器版酒馆！
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../silly/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    酒馆使用
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            酒馆使用
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../silly/tavern/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    酒馆介绍——萌新向
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../silly/up/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VPS酒馆更新
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../silly/char/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    正确导入/导出更新后角色卡的方法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../silly/css/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    前端卡问题自查教程
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../silly/que/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    酒馆常见问题
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../silly/pc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    解放双手: 用移动设备连接搭建在PC端的酒馆
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../silly/lorebook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    世界书相关
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    获取ai渠道
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            获取ai渠道
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clewd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Clewd报错大全
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pro_refund/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pro退款流教程
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Gemini（哈基米）模型介绍、获取和使用教程
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Gemini（哈基米）模型介绍、获取和使用教程
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gemini_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么要用Gemini？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="为什么要用Gemini？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      优点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      缺点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      名词解释
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何获得API并使用在酒馆中？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="如何获得API并使用在酒馆中？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      需求:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      步骤:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      应该用什么预设？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      关于轮询
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="关于轮询">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zerxzlib" class="md-nav__link">
+    <span class="md-ellipsis">
+      ZerxZLib扩展
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      注意事项
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      错误代码对照表
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gemini-20-flash-thinking" class="md-nav__link">
+    <span class="md-ellipsis">
+      关于Gemini-2.0-flash-thinking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何添加酒馆还没更新的模型？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="如何添加酒馆还没更新的模型？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#indexhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      步骤一：找到index.html文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      步骤二：查询模型名并添加代码
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      手机端如何添加呢？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="手机端如何添加呢？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mt" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法一：使用MT文件管理器
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="方法一：使用MT文件管理器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      终端操作步骤
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      遇到问题？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../leinao_about/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    类脑和dc相关
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            类脑和dc相关
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../leinao_about/make_card/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一种通用制卡思路
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../leinao_about/discord/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Discord的特殊用法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gemini_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么要用Gemini？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="为什么要用Gemini？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      优点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      缺点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      名词解释
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何获得API并使用在酒馆中？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="如何获得API并使用在酒馆中？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      需求:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      步骤:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      应该用什么预设？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      关于轮询
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="关于轮询">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zerxzlib" class="md-nav__link">
+    <span class="md-ellipsis">
+      ZerxZLib扩展
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      注意事项
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      错误代码对照表
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gemini-20-flash-thinking" class="md-nav__link">
+    <span class="md-ellipsis">
+      关于Gemini-2.0-flash-thinking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何添加酒馆还没更新的模型？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="如何添加酒馆还没更新的模型？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#indexhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      步骤一：找到index.html文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      步骤二：查询模型名并添加代码
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      手机端如何添加呢？
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="手机端如何添加呢？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mt" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法一：使用MT文件管理器
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="方法一：使用MT文件管理器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      终端操作步骤
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      遇到问题？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="gemini">Gemini（哈基米）模型介绍、获取和使用教程</h1>
+<div class="admonition note">
+<p class="admonition-title">总结</p>
+<p>本文档介绍了 Gemini(哈基米)模型,包括其特点、优点、缺点以及如何获取 API 并在 Silly Tavern 中使用。Gemini 模型具有免费、文笔不错、审查力度低等优点,但也存在容易被截断、可能不如 Claude 3.5s 等缺点。文档还提供了详细的 API 申请步骤、预设选择建议以及手机端添加模型的方法。此外,还包含了常见错误代码对照表和关于 Gemini-2.0-flash-thinking 模型的说明。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">作者：络络（lolodesu_）</p>
+<p>包含多项时效性内容，请注意甄别</p>
+<p>编写于2025年1月</p>
+</div>
+<p>Gemini（因为有时候有点笨且发音酷似流行网络梗，所以也被叫作哈基米x）是 Google 推出的大模型, 有多个版本。</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>时效性内容，请注意日期，关注谷歌最新计划</p>
+</div>
+<p>对于酒馆RP来说目前主流 <del>（可以白嫖）</del> 的有：</p>
+<p>Gemini-2.0-flash-exp（2.0flash）、</p>
+<p>Gemini-2.0-flash-thinking-exp（thinking或1219）、</p>
+<p>Gemini-Exp-1206（1206） (截止在2025年一月份)</p>
+<p>(编写时Gemini-2.0-pro还没开放）</p>
+<h2 id="gemini_1">为什么要用Gemini？</h2>
+<h3 id="_1">优点</h3>
+<ul>
+<li><strong>免费</strong></li>
+<li><strong>文笔不错、审查力度低到几乎没有</strong></li>
+<li>响应速度极快</li>
+<li>高难提示词环境发挥好</li>
+<li>输出速度快适合前端卡</li>
+<li>角色扮演能力强于GPT</li>
+</ul>
+<h3 id="_2">缺点</h3>
+<ul>
+<li><strong>会被截断</strong>（因此也需要使用破限来防止截断）</li>
+<li>可能不如Claude3.5s</li>
+<li>容易封号</li>
+<li>开启流式传输更容易被截断，因此重口<strong>要求关闭流式传输</strong></li>
+<li>需要时刻保证你的网络可以连接谷歌</li>
+<li>实验性模型经常微调，可能每天的效果都不一样</li>
+<li>对<strong>格式</strong>支持比较死板<strong>有时会出错</strong>，可能需要创作者使用更加规范的格式</li>
+<li>笨笨，智商普遍认为不如同类产品claude系列</li>
+</ul>
+<h3 id="_3">名词解释</h3>
+<ul>
+<li>前端卡：指使用前端助手的角色卡，使用了html、css、js等前端语言进行创作的卡，一般拥有漂亮的界面和互动选项，通过主页中是否被要求安装前端助手来判断</li>
+<li>破限：是预设的功能之一，通过一些提示词来绕过审查模型进行输出NSFW内容</li>
+<li>截断：检测到NSFW内容后，模型会截断输出（也就是话说一半不说了）</li>
+<li>流式传输：开启后，模型会逐字逐句输出，而不是一次性输出全部内容，实时查看文本，减少等待时间。</li>
+</ul>
+<h2 id="api">如何获得API并使用在酒馆中？</h2>
+<h3 id="_4">需求:</h3>
+<p>Gemini是免费的，并且申请起来非常简单，<strong>需要拥有闲置的谷歌账号</strong>（可能是最难的部分）、适合的魔法（你都来这里了应该不用我说吧w）</p>
+<p>违反用户条例的使用Gemini模型可能有小概率导致谷歌账号被封号，所以 <strong>非常建议</strong> 准备一个闲置的<strong>谷歌小号</strong>，避免主用账号被封禁。</p>
+<h3 id="_5">步骤:</h3>
+<ol>
+<li>浏览器启用无痕（隐私）模式</li>
+<li>注册谷歌号：将浏览器切换到英文语言、登录英文的谷歌网站进行注册、需要手机号验证（完成上诉操作可以使用+86的手机号）。</li>
+<li>或者购买谷歌号：也可以另行自己购买谷歌号，价格在1.5元左右，这里不放任何渠道请自行寻找。</li>
+<li>登录申请 Gmeini API 网站 <a href="https://aistudio.google.com/apikey">https://aistudio.google.com/apikey</a>  ，查看右上角是否是你的谷歌小号，如果不是请切换。（第一此进入可能会有一个用户协议勾选同意界面，同意就行啦。记得注意代理地址，若地址为香港会导致无法访问此页面）</li>
+</ol>
+<p><img alt="img" loading="lazy" src="../gemini/Picture-1.png" /></p>
+<ol>
+<li>点击蓝色的<strong>密钥创建API密钥（Creat API KEY)</strong>按钮。</li>
+<li>在搜索栏中创建新项目或者选择默认项目、点击蓝色的密钥（创建密钥按钮）</li>
+</ol>
+<p><img alt="img" loading="lazy" src="../gemini/Picture-2.png" /></p>
+<ol>
+<li>点击复制，这就是你的api，非常简单吧？（api会保留在这个网站下方，请记住或者收藏来方便下次查找）</li>
+<li>如果一个api不够你使用，建议创建<strong>多个谷歌账号</strong>申请api来进行轮询使用</li>
+</ol>
+<p>注意： <strong>单个谷歌号支持通过多项目来进行申请多个api，但封号率较高不推荐使用</strong></p>
+<p>在酒馆中选择Google AI Studio，并填入API Key（和openai不同的是，测试按钮无法测试属于正常，可以通过测试消息按钮进行测试）（来自@NeilYuan:不能使用记得打开翻墙软件的TUN模式，或者更改sillytavern根目录下的config文件中的proxy。）</p>
+<p><img alt="img" loading="lazy" src="../gemini/Picture-3.png" /></p>
+<p><strong>附录1：</strong></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>⚠️时效性内容，请注意日期，关注谷歌最新计划</p>
+</div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>来自@Neil Yuan提供的数据（来自<a href="https://ai.google.dev/gemini-api/docs/models/gemini?hl=zh-cn">Google ai studio</a> ）</strong></th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Gemini 2.0 flash exp</strong></td>
+<td style="text-align: left;"><strong>1500次/天    10次/分钟</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Gemini 1.5pro</strong></td>
+<td style="text-align: left;"><strong>50次/天          2次/分钟</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Gemini exp 1206</strong></td>
+<td style="text-align: left;"><strong>100次/天</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Gemini 2.0 flash thinking exp （1219）</strong></td>
+<td style="text-align: left;"><strong>1500次/天    10次/分钟</strong></td>
+</tr>
+</tbody>
+</table>
+<p>如果你明显感到单个账号使用Gemini无法满足需求，再考虑多账号轮询。</p>
+<p><strong>附录2：</strong></p>
+<p>如果你申请完发现plan这里不是免费而是去账单，那么等一会并刷新网页就好了</p>
+<p>（注意，在变为free之前立刻使用可能会报错）</p>
+<p><img alt="img" loading="lazy" src="../gemini/Picture-4.png" /></p>
+<p><img alt="img" loading="lazy" src="../gemini/Picture-5.png" /></p>
+<h2 id="_6">应该用什么预设？</h2>
+<p>千万<strong>不要使用Claude的预设</strong>，而是单独在预设、破限区中寻找Gemini的专属预设（可以勾选tag或者使用搜索bot，非常推荐使用搜索bot）</p>
+<p>使用预设后应该仔细阅读对应预设的使用说明，根据要求切换分析/思维链等功能，很多预设针对不同的模型设置了不同的选项。</p>
+<h2 id="_7">关于轮询</h2>
+<h3 id="zerxzlib">ZerxZLib扩展</h3>
+<p>和其他扩展一样，在扩展那一页点击安装，并填入此链接（需要魔法网络环境）：
+<a href="https://github.com/ZerxZ/SillyTavern-Extension-ZerxzLib">https://github.com/ZerxZ/SillyTavern-Extension-ZerxzLib</a></p>
+<p>此扩展自带完善的使用说明，以及gemini报错分析表格，非常好用。</p>
+<h3 id="_8">注意事项</h3>
+<p>此扩展自带html注入功能，此功能会与前端助手有部分冲突，如果你发现自己玩前端卡出现bug，请尝试关闭此扩展的html注入功能。</p>
+<h3 id="_9">错误代码对照表</h3>
+<p><strong>下表来源于ZerxZLib扩展和@NeilYuan的补充</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">报错</th>
+<th style="text-align: center;">原因或解决方案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">429/Resource has been exhausted</td>
+<td style="text-align: center;">撞到速率上限了，请等一会，若还是出现此报错请将最大上下文调整至 50k 以下</td>
+</tr>
+<tr>
+<td style="text-align: center;">Internal Server Error</td>
+<td style="text-align: center;">手机端遇到请换成 clash，不要使用类如**VPN、** 加速器等第三方梯子软件，pc 端用户请打开服务模式和 tun 模式，若仍出现此报错需要检查一下反向代理-代理地址中是否留空，若有地址请删掉，还有可能是您的输入上下文过长。调高酒馆里的最大上下文长度，注意不要超过模型能接受的</td>
+</tr>
+<tr>
+<td style="text-align: center;">User location is not supported for the API use.</td>
+<td style="text-align: center;">节点处于被限制的国家，请更换节点(美国最优先，请勿选择欧洲、中国香港、俄罗斯等地区)</td>
+</tr>
+<tr>
+<td style="text-align: center;">Too Many Requests</td>
+<td style="text-align: center;">重刷过于频繁，等待一分钟，若无效则本日请求已达上限</td>
+</tr>
+<tr>
+<td style="text-align: center;">Bad request</td>
+<td style="text-align: center;">网络环境出错或 API 已死（账号或项目被封禁）</td>
+</tr>
+<tr>
+<td style="text-align: center;">API key expired. Please renew the API key</td>
+<td style="text-align: center;">API key 已过期或被删除</td>
+</tr>
+<tr>
+<td style="text-align: center;">The model is overloaded. Please try later</td>
+<td style="text-align: center;">此模型暂时闭馆微调，暂停开放，请换用别的模型或等待一段时间</td>
+</tr>
+<tr>
+<td style="text-align: center;">Please use a valid role: user, model.</td>
+<td style="text-align: center;">你使用了需要打补丁的预设，请换不需要补丁的预设或打补丁</td>
+</tr>
+<tr>
+<td style="text-align: center;">User location is not supported for the API use without a billing account linked.</td>
+<td style="text-align: center;">处在 Google 政策限制免费层级的地区(如英国、意大利)</td>
+</tr>
+<tr>
+<td style="text-align: center;">API key not valid. Please pass a valid API key</td>
+<td style="text-align: center;">API 返回错误，检查 API 是否可用</td>
+</tr>
+<tr>
+<td style="text-align: center;">权限被拒绝：消费者已被暂停。</td>
+<td style="text-align: center;">谷歌账号被封禁/api还没有转到免费层级</td>
+</tr>
+<tr>
+<td style="text-align: center;">MakerSuite API returned no candidate</td>
+<td style="text-align: center;">Prompt was blocked due to : OTHER 本次输出被截断，请关闭流式传输</td>
+</tr>
+<tr>
+<td style="text-align: center;">Not Found</td>
+<td style="text-align: center;">模型选择错误，请不要选择除 Gemini 系外的模型或 Gemini Ultra</td>
+</tr>
+<tr>
+<td style="text-align: center;">MakerSuite Candidate text empty</td>
+<td style="text-align: center;">还是截断，解决方法有很多，关闭一些全局世界书/更改输入内容/换版本更新一点的预设</td>
+</tr>
+<tr>
+<td style="text-align: center;">403/Forbidden</td>
+<td style="text-align: center;">账号或项目被封禁，API key 无法调用</td>
+</tr>
+</tbody>
+</table>
+<p><strong>【此内容来源于ZerxZ，未经授权，如有侵权请联系我或samb进行删除，discord：@lolodesu_】</strong></p>
+<h2 id="gemini-20-flash-thinking">关于Gemini-2.0-flash-thinking</h2>
+<div class="admonition warning">
+<p class="admonition-title">时效性内容，请注意日期，关注谷歌最新计划</p>
+<p>此内容编写于2025年1月时，具有一定时效性，如果你查看的日期相对较晚，请仔细调查你所在的时间是否具有有效性。</p>
+</div>
+<p>此模型目前具有<strong>经常输出俄语、西班牙语等其他文字的问题，是谷歌官方的bug</strong>，不是你的问题也不是预设和酒馆的问题。</p>
+<p>这个模型是相对特殊的自带COT的模型，只有切换到staging分支并更新到最新版，在预设上方才会出现是否显示模型自带思维链的选项，请根据你使用的预设作者的要求来决定切换分支和更新酒馆。</p>
+<p>以及预览阶段的上下文上限是 32K （32000），记得改小你酒馆聊天预设设置的上下文大小以避免 413/400 等错误。</p>
+<h2 id="_10">如何添加酒馆还没更新的模型？</h2>
+<p>接下来的步骤较难，更推荐你使用编写好的脚本
+<a href="https://github.com/LenAnderson/SillyTavern-CustomModels">https://github.com/LenAnderson/SillyTavern-CustomModels</a></p>
+<h3 id="indexhtml">步骤一：找到index.html文件</h3>
+<p>找到酒馆文件目录 ~:\SillyTavern\public-&gt; 选择index.html文件，使用文本管理器（txt）打开，通过（Ctrl + F）搜寻
+gemini-exp-1206</p>
+<h3 id="_11">步骤二：查询模型名并添加代码</h3>
+<p>定位后-&gt;找到的位置如上形式的代码-&gt;按照他的格式放入新增代码（插入位置随意）</p>
+<option value="gemini-2.0-flash-thinking-exp-01-21">Gemini 2.0 Flash thinking exp 0121</option>
+<p>其中gemini-2.0-flash-thinking-exp-01-21的部分是你想要添加的模型名，后边的名字可以任意取，只要你能知道就可以没有要求，但要确保value="gemini-2.0-flash-thinking-exp-01-21"引号中的模型是谷歌官网中真实存在的。</p>
+<p>怎么知道模型名具体是什么？
+打开你获取API时候的网站在左侧点击上方create prompt，或者点开下边的网站
+<a href="https://aistudio.google.com/prompts/new_chat">Untitled prompt | Google AI Studio</a>
+看右侧模型选择的下拉菜单按钮，可以选择模型名，其中用 - 连接，不包含空格的名字就是具体的模型名字，需要一字不差的加入到index.html中</p>
+<p>关于模型更新新闻欢迎浏览类脑频道</p>
+<p><img alt="img" loading="lazy" src="../gemini/Picture-6.png" /></p>
+<h2 id="_12">手机端如何添加呢？</h2>
+<h3 id="mt">方法一：使用MT文件管理器</h3>
+<p>简单的方法就是下载MT文件管理器并连接Termux，非常简单我不会写详细的教程，放一下正常人类都能懂的教程啦</p>
+<p><img alt="img" loading="lazy" src="../gemini/Picture-7.png" /></p>
+<p>软件在哪里下载？懂得下载Discord的你应该知道怎么下载软件，我推荐在浏览器搜索coolapk下载酷安来找到MT文件管理器。</p>
+<p>当然你也可以直接用终端来添加，使用termux终端进行编写需要你知道基础的Linux命令和简单的nano使用方法。</p>
+<h4 id="_13">终端操作步骤</h4>
+<ol>
+<li>打开Termux终端，如果你开启终端会自动进入脚本界面，请找到退出方法或者用Ctrl+C终止指令来结束你的脚本界面</li>
+<li>现在你就来到终端根目录，输入 <code>ls</code> 来查看当前层级下的目录都有什么</li>
+</ol>
+<p>示例：
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>root@lolo:-#<span class="w"> </span>ls
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>clewd<span class="w">            </span>SillyTavern
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>myenv<span class="w">            </span>st_promot
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>node-....（省略）
+</span></code></pre></div></p>
+<ol>
+<li>看到SillyTavern了吗？那就是我们的目标，使用 <code>cd</code> 命令来进入文件夹（相当于你在windows上双击打开文件夹）一定要注意大小写&gt;&lt;</li>
+</ol>
+<p>示例：
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>root@lolo:-#<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>SillyTavern/
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>root@lolo:~/SillyTavern#<span class="w"> </span>
+</span></code></pre></div></p>
+<ol>
+<li>这样就进入了SillyTavern文件夹！很棒哦，你可以再次使用ls来查看文件夹的内容，其中一个public文件夹就是我们所要找的index.html文件所在地！</li>
+</ol>
+<p>示例：
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>root@lolo:~/SillyTavern#<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>public/
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>root@lolo:~/SillyTavern/public#ls
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>css<span class="w">    </span>lib.js<span class="w">    </span>scripts<span class="w">    </span>favicon.ico….（省略）
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>index.html<span class="w"> </span>…（省略）
+</span></code></pre></div></p>
+<ol>
+<li>你可以看到我cd（进入目录）后用了ls（查看文件）发现了我们的index.html就在其中呢~！那么像在Windows一样打开文件开始编写需要怎样做呢？使用nano指令：</li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>root@lolo:~/SillyTavern/public#nano<span class="w"> </span>index.html
+</span></code></pre></div>
+<p>哇...进入了一个很高级很黑客的界面呢，也许下次朋友聚会时候你可以打开这个文件假装自己是黑客用来装x（）</p>
+<p><img alt="img" loading="lazy" src="../gemini/Picture-8.png" /></p>
+<ol>
+<li>让我们使用CTRL+F来进行查找吧~！CTRL就在你输入法的上方呢</li>
+</ol>
+<p>你可以看到我的截图中已经打开了Ctrl+F的查找模式（一个Search对话条呢），现在让我们输入代码来定位，或者也可以长按选择paste（粘贴）：
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>gemini-exp-1206
+</span></code></pre></div>
+（或者你也可以自己手打一个gemini-exp，大概就足够定位到了！）</p>
+<p>就能看到以<code>&lt;option value="gemini-2.0-flash-thinking-exp-01-21"&gt;Gemini 2.0 Flash thinking exp 0121&lt;/option&gt;</code>开头这里，这里存放着所有可以选择的模型。</p>
+<ol>
+<li>之后我们要在他下方或者你随便找一个位置啦（要单独成一行才行）</li>
+<li>点击END键快速来到这一行的末尾</li>
+<li>然后敲击一个回车/换行</li>
+<li>然后敲击tab键盘（就是那个两个箭头反向的按钮哦）来到达和其他选项一样的层级</li>
+</ol>
+<p>就像这样~！</p>
+<p><img alt="img" loading="lazy" src="../gemini/Picture-9.png" /></p>
+<ol>
+<li>就是现在！粘贴！（粘贴后看起来可能像是在前边没对齐，不要慌张这是正常的！只是显示效果）
+<div class="language-html highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;gemini-2.0-flash-thinking-exp-01-21&quot;</span><span class="p">&gt;</span>Gemini 2.0 Flash thinking exp 0121<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+</span></code></pre></div></li>
+</ol>
+<p><img alt="img" loading="lazy" src="../gemini/Picture-10.png" /></p>
+<ol>
+<li>让我按一下HOME来到行首检查一下！</li>
+</ol>
+<p><img alt="img" loading="lazy" src="../gemini/Picture-11.png" /></p>
+<ol>
+<li>
+<p>太棒了你已经完全编辑好了呢，现在别忘记<strong>保存文件</strong>：</p>
+<ul>
+<li>使用CTRL+X来退出并保存</li>
+<li>他会问你Save modified buffer？（是否保存文件的意思）</li>
+<li>当然啦，回答Yes！，也就是按一下Y</li>
+<li>File name....大概就是问你文件名？默认就是index.html呢完全正确不要改啦，让我们回车！</li>
+<li>然后你就退出nano界面了，这样子我们文件就编辑好了！</li>
+</ul>
+</li>
+<li>
+<p>重新启动一下酒馆让我们看看模型在不在？（如果你用的是自动脚本只需要重启Termux就好啦）</p>
+</li>
+</ol>
+<h3 id="_14">遇到问题？</h3>
+<p>上述教程如果有问题、错误、遇到麻烦，也欢迎来dc类脑私信络络@lolodesu_</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.top", "navigation.indexes", "search.suggest", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>

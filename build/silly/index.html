@@ -1,0 +1,2041 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://down-3ud.pages.dev/build/silly/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../gitdesk/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
+    
+    
+      
+        <title>Windows本地部署酒馆与clewd教程 - 类脑宝宝教程</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#windowsclewd" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="类脑宝宝教程" class="md-header__button md-logo" aria-label="类脑宝宝教程" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            类脑宝宝教程
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Windows本地部署酒馆与clewd教程
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preferenceocs/"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preferenceocs/" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/songdaopi/down" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    songdaopi/down
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+    
+  
+  首页
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+    
+  
+  搭建部署
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../silly/" class="md-tabs__link">
+          
+  
+    
+  
+  酒馆使用
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../get_ai/" class="md-tabs__link">
+          
+  
+    
+  
+  获取ai渠道
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../leinao_about/" class="md-tabs__link">
+          
+  
+    
+  
+  类脑和dc相关
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="类脑宝宝教程" class="md-nav__button md-logo" aria-label="类脑宝宝教程" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    类脑宝宝教程
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/songdaopi/down" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    songdaopi/down
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    首页
+    
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            首页
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    搭建部署
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            搭建部署
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Windows本地部署酒馆与clewd教程
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Windows本地部署酒馆与clewd教程
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sillytavern" class="md-nav__link">
+    <span class="md-ellipsis">
+      欢迎来到SillyTavern的世界！
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.安装流程一览
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1hello-sillytavernclewd" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.Hello SillyTavern!——来认识一下酒馆和Clewd吧！
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.Hello SillyTavern!——来认识一下酒馆和Clewd吧！">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1关于酒馆
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12clewd" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2关于Clewd
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2gitnode" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.我的工具箱在哪里？——安装git与node
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.我的工具箱在哪里？——安装git与node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21git" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1安装git
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1安装git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211git" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.1确认是否安装git
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212git" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.2开始安装git
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1.2开始安装git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2121wingetgit" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.2.1使用winget安装git（推荐）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2122git" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.2.2使用安装包安装git
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22node" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2安装node
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2安装node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221node" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.1确认是否安装node
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222node" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.2开始安装node
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2.2开始安装node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2221wingetnode" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.2.1使用winget安装node（推荐）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2222node" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.2.2使用安装包安装node
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3sillytavern" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.酒馆是怎样建成的——安装SillyTavern
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.酒馆是怎样建成的——安装SillyTavern">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31node" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1配置node镜像（可选，推荐）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1配置node镜像（可选，推荐）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311npm" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.1查看当前的npm镜像
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.2修改镜像
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32sillytavern" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2安装SillyTavern
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3安装依赖与运行酒馆
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3安装依赖与运行酒馆">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331npm" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.1手动安装npm依赖（稳定）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332npm" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.2自动安装npm依赖（推荐）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333sillytavern" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.3开始运行SillyTavern
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      附录
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gitdesk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    通过 Github Desktop 在PC本地安装酒馆/Clewd/YouChat_Proxy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VPS 云端部署酒馆与Clewd
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dock/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    傻瓜式图文教程:SillyTavern Docker 一键部署教程,开箱即用的容器版酒馆！
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../silly/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    酒馆使用
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            酒馆使用
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../silly/tavern/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    酒馆介绍——萌新向
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../silly/up/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VPS酒馆更新
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../silly/char/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    正确导入/导出更新后角色卡的方法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../silly/css/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    前端卡问题自查教程
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../silly/que/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    酒馆常见问题
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../silly/pc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    解放双手: 用移动设备连接搭建在PC端的酒馆
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../silly/lorebook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    世界书相关
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../get_ai/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    获取ai渠道
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            获取ai渠道
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../get_ai/clewd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Clewd报错大全
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../get_ai/pro_refund/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pro退款流教程
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../get_ai/Gemini/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gemini（哈基米）模型介绍、获取和使用教程
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../leinao_about/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    类脑和dc相关
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            类脑和dc相关
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../leinao_about/make_card/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一种通用制卡思路
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../leinao_about/discord/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Discord的特殊用法
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sillytavern" class="md-nav__link">
+    <span class="md-ellipsis">
+      欢迎来到SillyTavern的世界！
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.安装流程一览
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1hello-sillytavernclewd" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.Hello SillyTavern!——来认识一下酒馆和Clewd吧！
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.Hello SillyTavern!——来认识一下酒馆和Clewd吧！">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1关于酒馆
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12clewd" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2关于Clewd
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2gitnode" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.我的工具箱在哪里？——安装git与node
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.我的工具箱在哪里？——安装git与node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21git" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1安装git
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1安装git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211git" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.1确认是否安装git
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212git" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.2开始安装git
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1.2开始安装git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2121wingetgit" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.2.1使用winget安装git（推荐）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2122git" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1.2.2使用安装包安装git
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22node" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2安装node
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2安装node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221node" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.1确认是否安装node
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222node" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.2开始安装node
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2.2开始安装node">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2221wingetnode" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.2.1使用winget安装node（推荐）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2222node" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.2.2使用安装包安装node
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3sillytavern" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.酒馆是怎样建成的——安装SillyTavern
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.酒馆是怎样建成的——安装SillyTavern">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31node" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1配置node镜像（可选，推荐）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1配置node镜像（可选，推荐）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311npm" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.1查看当前的npm镜像
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.2修改镜像
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32sillytavern" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2安装SillyTavern
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3安装依赖与运行酒馆
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3安装依赖与运行酒馆">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331npm" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.1手动安装npm依赖（稳定）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332npm" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.2自动安装npm依赖（推荐）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333sillytavern" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.3开始运行SillyTavern
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      附录
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="windowsclewd">Windows本地部署酒馆与clewd教程</h1>
+<div class="admonition note">
+<p class="admonition-title">作者：方素琪（类脑dc@allenade_35238）</p>
+<p>作者不对您在参考本教程时因误操作或其他原因造成的任何时间及其他损失负责。</p>
+</div>
+<h2 id="sillytavern"><strong>欢迎来到SillyTavern的世界！</strong></h2>
+<p>这篇教程是该教程组中对你的电脑修改最小，尽量贴合新人的教程。我将会手把手的教你用你自己的Windows电脑来搭建一个可以畅玩的SillyTavern（以下可能被称为“酒馆”）。
+这篇教程面向的是对于计算机（特指Windows系统）操作极其陌生的电脑萌新，所以里面的一些文本对于有使用命令行基础尤其是对git有一定了解的的新人来说十分简单。
+啊？为什么没有Linux？你都用Linux了git clone很难吗？哪怕去研究研究docker部署。
+哦对了，为了避免浪费时间</p>
+<div class="admonition warning">
+<p class="admonition-title">请注意：</p>
+<p>在 Windows 7 及以下版本的Windows系统上是不可能安装SillyTavern的，因为它无法运行 Node.js 18.16</p>
+</div>
+<h2 id="0">0.安装流程一览</h2>
+<p>被冗长的目录吓到了？别怕！其实我只是把非常简单的步骤讲的非常细，总的来看步骤十分简单的！ 
+<strong>总体安装流程图</strong></p>
+<p>总体安装流程图的作用是让你在具体看教程之前知道自己将要做什么，因此更加推荐要完整的查看教程的内容。（鸣谢络络画的代码块和总结内容）</p>
+<pre class="mermaid"><code>flowchart TD
+    开始 --&gt; Git安装
+    Git安装 --&gt; |检查git -v| NodeJS安装
+    NodeJS安装 --&gt; |检查node -v| NPM配置
+    NPM配置 --&gt; |设置镜像| 拉取代码
+    拉取代码 --&gt; |git clone| 安装依赖
+    安装依赖 --&gt; |start.bat| 启动项目
+    启动项目 --&gt; |访问8000端口| 完成</code></pre>
+<p>不要被字数吓到，一句话总结流程：</p>
+<p><strong>装Git和Node → 拉代码 → 双击自动安装依赖并运行 → 打开浏览器开玩！</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>如果你对从github拉取代码有一定了解，那么可以根据流程图自行安装来节省时间。</p>
+</div>
+<h2 id="1hello-sillytavernclewd">1.Hello SillyTavern!——来认识一下酒馆和Clewd吧！</h2>
+<h3 id="11">1.1关于酒馆</h3>
+<p>所以你可能会疑惑，SillyTavern到底是什么东西？
+在 <a href="https://github.com/SillyTavern/SillyTavern">GitHub的官方页面</a> ，他们是这么写的：</p>
+<div class="admonition quote">
+<p class="admonition-title">酒馆</p>
+<p><strong>SillyTavern 是一个可以安装在电脑（和安卓手机）上的用户界面，让您可以与文本生成的人工智能互动，并与您或社区创建的角色聊天/玩角色扮演游戏。SillyTavern 是 TavernAI 1.2.8 的一个分支，正在进行更积极地开发，并添加了许多重要功能。在这一点上，它可以被视为完全独立的程序。</strong></p>
+</div>
+<p>看不懂？没事，说实话这就和你在安装应用程序时必须点的隐私协议和用户条款一样，文邹邹的不知所云。
+让我来用简单的方式来说一下： 比如从前有一个ai源（例如你可能熟知的chatGPT），现在你需要让ai说一些……不太能那么上得了台面的东西。
+显然你不可能去官网，直接给ai打字说：“<strong>哦老天我的下面要着起来了,快给我写一个让我舒服舒服的文章。”</strong></p>
+<figure>
+  <img alt="Image title" loading="lazy" src="/img/build/shu.jpeg" />
+  <figcaption>图1.1，错误的对话方法</figcaption>
+</figure>
+<p>那么这个时候酒馆的用处就体现了：
+<strong>酒馆可以让你通过非官网的方式来和ai对话，提供给你一个方便管理promot（提示词）的平台。</strong>
+有人可能会问：promot是什么？
+你可以暂时理解为，角色卡啊，世界书啊这些在进行角色扮演之前要提前发送给ai的东西。</p>
+<h3 id="12clewd">1.2关于Clewd</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>（作者注——这部分在施工）</p>
+</div>
+<p>还是看不懂？不用担心！相信你在搭建和使用酒馆的过程中，一定会慢慢理解这些文字的意思。
+毕竟，只有人们的社会实践，才是人们对于外界认识的真理性的标准。</p>
+<h2 id="2gitnode">2.我的工具箱在哪里？——安装git与node</h2>
+<p>额，什么是git和node？
+好吧，出于对创作者的尊重，请允许我把官方说明贴在这里（点击名字以跳转到官网）：
+<a href="https://git-scm.com">Git</a>是一个免费的开源分布式版本控制系统，旨在处理从小型到快速高效的超大型项目。
+<a href="https://nodejs.org">Node.js</a>是一个免费的开源跨平台 JavaScript 运行时环境。它允许开发人员创建服务器、Web 应用程序、命令行工具和脚本。
+你知道我要说什么——这又是一个典型的“<strong>隐私协议和用户条款</strong>”类型的语言。</p>
+<p>你可以简单理解为：
+<strong>酒馆就像你要玩你家里的拼装玩具。git是你放玩具的架子——你需要先去架子那里拿到你的玩具。
+而node则是你拼装时候需要的工具箱——没有工具箱你就算拿到了玩具也拼不出来。</strong>
+闲话少叙，让我们开始吧！</p>
+<div class="admonition note">
+<p class="admonition-title">PS</p>
+<p>作者本人的所有电脑在写本教程时，均已安装了git和node故这一部分的教程<strong>未经本人测试，但已经经过了多方查证和校对力图准确易懂。</strong></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>此外值得指出的是，在酒馆的官网提供了使用github desktop安装酒馆的方法。但作者主观认为对新手不友好,故极其不推荐。这里给出官网这一教程的<strong>链接</strong>。除此之外,在本教程组中也有关于这一<a href="../gitdesk/"><strong>安装方法的具体描述</strong></a>（非本教程作者所写)本教程组也有<a href="../dock/"><strong>使用Windows的docker部署的方法</strong></a>(非本教程作者所写）操作简单无脑。但为了保护对于编程不甚了解的各位的电脑远离一些可能一辈子都用不上的奇怪软件，本教程不会详细展开这类方法，感兴趣的大家欢迎自行尝试。</p>
+</div>
+<h3 id="21git">2.1安装git</h3>
+<h4 id="211git">2.1.1确认是否安装git</h4>
+<p>首先确认你是否已经安装了git：
+按windows徽标+r键，然后在框内输入 <code>cmd/powershell</code>然后点击“确定”来打开<code>cmd/powershell</code></p>
+<figure>
+  <img alt="Image title" loading="lazy" src="/img/build/cmd.jpeg" />
+  <figcaption>图2.1，使用组合键打开cmd</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">注</p>
+<p>作者个人习惯使用cmd，接下来的示例全部使用cmd演示，powershell同理。</p>
+</div>
+<p>在打开cmd后，你会看到如图所示的黑色窗口（powershell有可能是蓝色），接下来输入代码：</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>-v
+</span></code></pre></div>
+<p>然后回车。请注意git与-v中间有空格，之后的命令不再强调类似的空格。
+接下来，你会看到两种可能：</p>
+<ol>
+<li>像这样提示<code>git version xxxxxx</code></li>
+</ol>
+<figure>
+  <img alt="Image title" loading="lazy" src="/img/build/gitins.jpeg" />
+  <figcaption>图2.2，成功安装git</figcaption>
+</figure>
+<p>这代表着你的电脑已经按照了git，请接下来转到安装node步继续。</p>
+<ol>
+<li>像这样提示“git不是内部或外部命令，也不是可运行的程序或批处理文件”</li>
+</ol>
+<figure>
+  <img alt="Image title" loading="lazy" src="/img/build/gitun.jpeg" />
+  <figcaption>图2.3，未安装git</figcaption>
+</figure>
+<p>这代表你的电脑尚未安装git，请继续。</p>
+<h4 id="212git">2.1.2开始安装git</h4>
+<p>有两种方式安装git：使用winget安装和下载安装包安装。</p>
+<h5 id="2121wingetgit">2.1.2.1使用winget安装git（推荐）</h5>
+<p>我已经懒到去找winget的官方说明了，所以不要管这是什么，让我们继续，好吗？
+对了，你关闭了cmd吗？没有？很好，让我们继续。如果关掉了也不要紧，重新打开便是。接下来输入：
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>winget install --id Git.Git -e --source winget
+</span></code></pre></div></p>
+<p>然后回车。如果不出意外，应该显示如下：</p>
+<figure>
+  <img alt="Image title" loading="lazy" src="/img/build/wget.jpeg" />
+  <figcaption>图2.4,使用winget安装git</figcaption>
+</figure>
+<h5 id="2122git">2.1.2.2使用安装包安装git</h5>
+<p>好吧好吧，我知道我理解，总有人在使用命令行的时候遇到各种各样的问题。
+要么自己的老旧电脑没有winget，要么不知道为什么使用了LTSC但是不愿意安装winget，要么就是单纯的对命令行控制电脑感到无所适从，要么就是家里年迈的老父亲忽然窜出来，说什么表叔的邻居的丈夫的外甥在上微机课的时候敲了两次命令行，电脑直接冒烟了，从此对命令行产生了深深的心理阴影。</p>
+<p>不管怎么说，这里也有不敲命令行的办法：
+首先在<strong>官网的下载页面</strong>，下载你需要的windows安装包，</p>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>如果你的操作系统是32位的,作者个人建议请放弃安装酒馆。</p>
+</div>
+<figure>
+  <img alt="Image title" loading="lazy" src="/img/build/gitweb.jpeg" />
+  <figcaption>图2.5 在官网下载git安装包</figcaption>
+</figure>
+<p>然后一路默认安装即可，这里的界面就像你在安装qq等众多windows的应用程序的安装程序一样，是不是很亲切？
+安装页面太多，为了保证排版，就不一一截图了。
+总之，无论你是用哪种方法，<strong>都要再次验证是否正常安装</strong>，然后就可以进行下一步安装node了。</p>
+<h3 id="22node">2.2安装node</h3>
+<p>安装node和安装git的方法高度一致（尤其对于winget来说），故这一部分的教程不会详细描述。</p>
+<h4 id="221node">2.2.1确认是否安装node</h4>
+<p>和看git的方法一样，在cmd输入代码：
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>node -v
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>npm -v
+</span></code></pre></div>
+然后回车。</p>
+<figure>
+  <img alt="Image title" loading="lazy" src="/img/build/node.jpeg" />
+  <figcaption>图2.6 检查node安装</figcaption>
+</figure>
+<p>在这一步，有些人可能会遇见<strong>无法加载文件xxx，因为在此系统上无法运行脚本</strong>的报错，这是一个非常好解决的报错，详情请看附录一，或者自行查找解决方案。</p>
+<h4 id="222node">2.2.2开始安装node</h4>
+<h5 id="2221wingetnode">2.2.2.1使用winget安装node（推荐）</h5>
+<p>在命令行输入
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>winget<span class="w"> </span>install<span class="w"> </span>OpenJS.NodeJS.LTS
+</span></code></pre></div>
+然后回车。
+聪明的你可能注意到这和安装git的命令格式有些许不同，但这只是参数输入上的区别，所以不用在意。</p>
+<h5 id="2222node">2.2.2.2使用安装包安装node</h5>
+<p>在<a href="https://nodejs.org/zh-cn/download">官网的下载页面</a>进行下载。</p>
+<figure>
+  <img alt="Image title" loading="lazy" src="/img/build/nodedown.jpeg" />
+  <figcaption>图2.7 下载页面</figcaption>
+</figure>
+<p>随后一路next安装即可。</p>
+<h2 id="3sillytavern">3.酒馆是怎样建成的——安装SillyTavern</h2>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>在进行下面的步骤之前，请确保你的电脑能够连接上外网，不过既然你都看到了这篇教程，想来这对你来说，应该并不是一件难事。</p>
+</div>
+<h3 id="31node">3.1配置node镜像（可选，推荐）</h3>
+<p>众所周知的原因，国内的电脑想要访问国外的网站总是很麻烦的。
+对于我们的工具箱node来说，我们一会要进行的配置就像是从工具箱拿工具，而从邻居家拿工具和从自己家拿工具显然差别很大。
+所以我们要配置node镜像，告诉电脑：你要从我家里已经复制好的工具箱里拿工具，而不是位于邻居家的官方的工具箱。</p>
+<h4 id="311npm">3.1.1查看当前的npm镜像</h4>
+<p>在cmd中输入命令:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>npm config get registry
+</span></code></pre></div>
+来查看当前的源</p>
+<p>可以看到，
+上面是<code>https://registry.npmjs.org</code>，这是并不位于国内的官方源，如果你刚刚安装了node，那么你应该显示的是这个；
+下面是<code>https://registry.npmmirror.com</code>，这是位于国内的淘宝源。</p>
+<h4 id="312">3.1.2修改镜像</h4>
+<p>作者使用的是国内镜像是淘宝源，天知道为什么阿里巴巴不叫他阿里源而是叫淘宝源，听起来就像是你在网上购物时发现的，那种用广告告诉你这是来自淘宝源头加工厂的货物，反正和计算机是八竿子打不着的。
+……
+……
+其实，阿里源听起来也挺土的，对吧？</p>
+<p>修改镜像的命令是：</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>npm<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>registry<span class="w"> </span>https://registry.npmmirror.com
+</span></code></pre></div>
+<ul>
+<li>如果你有自己中意的镜像源，只需要在命令里修改后面https开头的源地址即可。</li>
+<li>在按回车之后等几秒，会弹出等待输入下一个命令的光标，</li>
+<li>此时就代表着切换完成,我们可以再次运行查看命令来检查是否成功切换。</li>
+</ul>
+<h3 id="32sillytavern">3.2安装SillyTavern</h3>
+<p>好消息！你终于来到了心心念念（也许）的安装SillyTavern环节！
+更好的消息！最难的地方已经过去了！
+<del>所以，是不是还蛮简单的？</del></p>
+<p>首先，选择或干脆新建一个文件夹作为安装SillyTavern的地方，然后点击路径，输入cmd来使cmd定位此处。</p>
+<p><img alt="Image title" loading="lazy" src="/img/build/opencmd.jpeg" /></p>
+<figure>
+  <img alt="Image title" loading="lazy" src="/img/build/install.jpeg" />
+  <figcaption>图3.2-3.3</figcaption>
+</figure>
+<p>然后输入代码来从GitHub上下载SillyTavern
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/SillyTavern/SillyTavern<span class="w"> </span>-b<span class="w"> </span>release
+</span></code></pre></div>
+或
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/SillyTavern/SillyTavern<span class="w"> </span>-b<span class="w"> </span>staging
+</span></code></pre></div>
+前者的release是稳定版，staging是测试版，如果不是有特殊需要下载稳定版即可。 当然了，你可能会遇见下面的状况：</p>
+<p><img alt="er" src="/img/build/neterror.jpeg" /></p>
+<p>这实际上还是之前提到的网络问题，所以我们可以使用镜像（这里暂时懒得写，请自行寻找合适的镜像源），或者打开clash的TUN模式来尝试。 总之，如果一切顺利，你会看见：</p>
+<p><img alt="se" src="/img/build/successful.jpeg" /></p>
+<p>到此，我们成功的安装了SillyTavern。</p>
+<div class="admonition success">
+<p class="admonition-title">作者注</p>
+<p>如果有需要的话，这一步的方法同样适用于安装clewd。 其中，clewd的拉取命令是
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>git clone https://github.com/teralomaniac/clewd.git
+</span></code></pre></div>
+其余步骤与安装酒馆相同，不再赘述。</p>
+</div>
+<h3 id="33">3.3安装依赖与运行酒馆</h3>
+<p>别急！千万别急！还有最后一步你就可以见到你心心念念的酒馆了！
+在接下来两种方法二选一：</p>
+<h4 id="331npm">3.3.1手动安装npm依赖（稳定）</h4>
+<p>还记得你之前安装的node吗？现在派上用场了！ 在酒馆目录（注意！在安装完成后，git应该是新建一个文件夹的。所以如果你是像我一样一开始的目录是D:\SillyTavern，那么现在的酒馆目录应该是D:\SillyTavern\SillyTavern），运行命令是：
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>npm install
+</span></code></pre></div></p>
+<h4 id="332npm">3.3.2自动安装npm依赖（推荐）</h4>
+<p>如果你自己配置了镜像npm源，那么推荐用这个方法。 非常简单，一句话——双击start.bat。</p>
+<p>最后，无论你用哪种方法安装了npm，在安装时会有小横条在一直转圈，其中可能会抛出几条错误——但是如果是npm warn开头的无需在意。
+如果一切正常，那么会在几分钟后完成安装，耐心等待哦~</p>
+<h4 id="333sillytavern">3.3.3开始运行SillyTavern</h4>
+<p>随后，双击start.bat来打开酒馆（是的，你发现了，手动安装是可有可无的，其实手动安装只是为了定位可能出现的错误），直到出现如下代码：</p>
+<div class="admonition note">
+<p class="admonition-title">作者注：</p>
+<p>其实这里酒馆的官方文档提到不要用管理员运行start.bat,但是据我个人经验没什么区别。</p>
+</div>
+<p><img alt="co" src="/img/build/runing.jpeg" /></p>
+<p>系统可能会自动打开网页，也可能不会，如果没有的话，浏览器输入cmd里蓝色的地址，或者干脆按住ctrl键的同时点一下蓝色链接来跳转。</p>
+<p>在浏览器里出现此界面代表你的SillyTavern安装成功！开始享受你的ai老婆（老公）吧~ 在遇到各种问题的时候欢迎在dc戳我，或者在该教程的对应步骤处添加评论，我会经常来看看的！</p>
+<h2 id="_1">附录</h2>
+<ol>
+<li>npm运行时的加载策略报错解决方案（施工中）</li>
+<li>安装报错（收集中）</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.top", "navigation.indexes", "search.suggest", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>
